@@ -154,16 +154,22 @@ color: var(--Pale-orange);
 }
 
 button{
-background-color: var(--Orange);
-padding:  20px 100px ;
-margin: 5px;
-border-radius: 15px;
-cursor: pointer;
-color: var(--White);
-font-size: 15px;
-border: 1px solid var(--Orange);
-font-weight: 700;
-box-shadow:var(--Orange) 0px 25px 50px -12px;
+    background-color: var(--Orange);
+    padding:  20px 100px ;
+    margin: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    color: var(--White);
+    font-size: 15px;
+    border: 1px solid var(--Orange);
+    font-weight: 700;
+    box-shadow:var(--Orange) 0px 25px 50px -12px;
+    display: flex;
+    align-items: center;
+
+}
+button>span{
+    margin: 0 5px 0 10px
 }
 
 main img{
