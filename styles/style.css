@@ -73,8 +73,19 @@ padding: 100px 15px;
 nav> .avatar{
 width: 50px;
 margin-left:40px;
-
 }
+nav .avatar{
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+nav .avatar:hover{
+	opacity: .5;
+}
+nav .icon-cart:hover{
+    width: 25px;
+}
+
 nav{
 
 padding:  0px 0;
