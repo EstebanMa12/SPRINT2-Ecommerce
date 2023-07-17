@@ -48,4 +48,7 @@
     &__button{
         @include mixings.button;
     }
+    @media (min-width: 1115px){
+        padding-top: 60px;
+    }
 }
