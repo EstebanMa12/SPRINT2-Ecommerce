@@ -87,6 +87,7 @@ body {
   cursor: pointer;
   border: 2px solid hsl(26, 100%, 55%);
   border-radius: 50%;
+  opacity: 0.8;
 }
 
 .navbar {
@@ -97,12 +98,11 @@ body {
   list-style: none;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .navbar__link {
   text-decoration: none;
   color: hsl(219, 9%, 45%);
-  display: block;
-  align-items: center;
   height: 112px;
   padding-bottom: 42px;
 }
@@ -151,7 +151,7 @@ body {
 
 .gallery__image-container {
   height: 300px;
-  width: 100px;
+  width: 100%;
   background-image: url("/images/image-product-1.jpg");
   background-position: -35px;
   background-size: cover;
@@ -169,6 +169,11 @@ body {
 .gallery__previus:hover {
   cursor: pointer;
 }
+@media (min-width: 1115px) {
+  .gallery__previus {
+    display: none;
+  }
+}
 .gallery__next {
   background-color: hsl(0, 0%, 100%);
   width: 40px;
@@ -182,12 +187,40 @@ body {
 .gallery__next:hover {
   cursor: pointer;
 }
-.gallery__thumbnail {
+@media (min-width: 1115px) {
+  .gallery__next {
+    display: none;
+  }
+}
+.gallery__thumbnails {
   display: none;
 }
 @media (min-width: 1115px) {
-  .gallery__thumbnail {
-    display: block;
+  .gallery__thumbnails {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.gallery__thumbnail {
+  width: 90px;
+  border-radius: 16px;
+}
+.gallery__thumbnail:hover {
+  cursor: pointer;
+  border: 2px solid hsl(26, 100%, 55%);
+}
+@media (min-width: 1115px) {
+  .gallery {
+    width: 446px;
+    /*         &__thumbnails{
+
+            } */
+  }
+  .gallery__image-container {
+    background-position-y: 0;
+    border-radius: 16px;
+    height: 446px;
+    margin-bottom: 32px;
   }
 }
 
@@ -256,7 +289,25 @@ body {
 }
 @media (min-width: 1115px) {
   .details {
+    width: 446px;
     padding-top: 60px;
+  }
+  .details__title {
+    font-size: 2.7em;
+    margin-bottom: 48px;
+  }
+  .details__description {
+    font-size: 0.9em;
+    margin-bottom: 37px;
+  }
+  .details__prices {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .details__product-quantity {
+    display: flex;
+    gap: 32px;
   }
 }
 
@@ -270,6 +321,7 @@ body {
   width: 25px;
   height: 100%;
   padding: 24px 5px;
+  border-radius: 5px;
 }
 .input__minus:hover {
   cursor: pointer;
@@ -278,6 +330,7 @@ body {
   width: 25px;
   height: 100%;
   padding: 19px 3px;
+  border-radius: 5px;
 }
 .input__plus:hover {
   cursor: pointer;
@@ -351,7 +404,6 @@ body {
 
 .main-container {
   position: relative;
-  border: 1px solid black;
   width: 375px;
   margin: auto;
 }
