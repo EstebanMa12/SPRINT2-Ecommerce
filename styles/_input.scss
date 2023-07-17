@@ -1,0 +1,24 @@
+@use 'variables' as v;
+@use 'mixings';
+
+.input{
+    height: 57px;
+    display: flex;
+    justify-content: space-between;
+    &__minus{
+        @include mixings.changeNumber(24px, 5px);
+    }
+    &__plus{
+        @include mixings.changeNumber(19px, 3px);
+    }
+    &__number{
+        width: 100%;
+        border: none;
+        background-color: v.$Light-grayish-blue;
+        font-size: 1.2em;
+        font-weight: 700;
+        font-family: v.$Font;
+        text-align: center;
+        outline: none;
+    }
+}
