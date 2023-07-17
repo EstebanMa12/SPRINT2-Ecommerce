@@ -3,8 +3,10 @@
 @use 'header';
 @use 'navbar';
 @use 'modal-navbar';
+@use 'gallery';
 
 .main-container{
+    position: relative;
     border: 1px solid black;
     width: 375px;
     margin: auto;
