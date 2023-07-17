@@ -6,7 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="/styles/style.css">
-  <title>Frontend Mentor | E-commerce product page</title>
+  <title>E-commerce product page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -15,70 +15,108 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <nav class="flex">
-      <img src="images/logo.svg" alt="">
-      <ul class="flex">
-        <li>Collections</li>
-        <li>Men</li>
-        <li>Women</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
-
-      <img src="images/icon-cart.svg" class="icon-cart" >
-
-      <img src="images/image-avatar.png" alt="" class="avatar">
-      
-    </nav>
-
-    <main>
-
-    <section class="box">
-    <div class="image-container"><img src="images/image-product-1.jpg" alt="" class="image-product-1">
-      <div class="flex">
-      <img src="images/image-product-1-thumbnail.jpg" alt="" class="smallImages">
-      <img src="images/image-product-2-thumbnail.jpg" alt="" class="smallImages">
-      <img src="images/image-product-3-thumbnail.jpg" alt="" class="smallImages">
-      <img src="images/image-product-4-thumbnail.jpg" alt="" class="smallImages">
+  <main class="main-container">
+    <header class="header">
+      <div class="header__navigation">
+        <img src="images/icon-menu.svg" class="icon-menu">
+        <img src="images/logo.svg" class="icon-logo" alt="">
       </div>
-    </div>
-    
+      <nav class="navbar">
+        <ul class="navbar__items">
+          <li><a href="#" class="navbar_link">Collections</a></li>
+          <li><a href="#" class="navbar_link">Men</a></li>
+          <li><a href="#" class="navbar_link">Women</a></li>
+          <li><a href="#" class="navbar_link">About</a></li>
+          <li><a href="#" class="navbar_link">Contact</a></li>
+        </ul>      
+      </nav>
+      <div class="modal-navbar__background">
+        <nav class="modal-navbar">
+          <img class="modal-close" src="images/icon-close.svg" alt="">
+          <ul class="flex_R">
+            <li><a href="#" class="modal-navbar">Collections</a></li>
+            <li><a href="#" class="modal-navbar">Men</a></li>
+            <li><a href="#" class="modal-navbar">Women</a></li>
+            <li><a href="#" class="modal-navbar">About</a></li>
+            <li><a href="#" class="modal-navbar">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__cart-avatar">
+        <div class="header__cart">
+          <div class="header__cart--notification">3</div>
+          <img src="images/icon-cart.svg" class="icon-cart" >
+        </div>  
+        <img src="images/image-avatar.png" alt="" class="header__avatar">
+      </div>
+    </header>
 
-    <div class="text-box ">
-      <div class="text-box2">
-      <h3 class="orange">Sneaker Company</h3>
-  
-      <h1>Fall Limited Edition Sneakers</h1>
-  
-      <p> These low-profile sneakers are your perfect casual wear companion. Featuring a 
-      durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
-      
-      <div class="flex"> <h2>$125.00</h2>
-      <span class="orange discount">50%</span>
-      </div>
-      
-      <div class="oldP"> $250.00 </div>
- 
-      <div class="cart flex">
-        <div class="flex quantityShoes">
-          <img src="images/icon-minus.svg" alt="" class="minus">
-          <span id="qtyNum">0</span>
-          <img src="images/icon-plus.svg" alt="" class="plus"></div>
-          <button class="button">
-            <img src="images/icon-cart.svg" alt="" >
-            <span>Add to cart</span>
-          </button> 
-      </div>
-      </div>
-    </div>
+
+    <section class="content">
+      <article class="gallery">
+        <div class="gallery__image-container">
+          <img src="/images/icon-previous.svg" class="gallery-previus">
+          <img class="gallery-next" src="/images/icon-next.svg" >
+        </div>
+        <div class="gallery__thumbnails">
+          <img src="/images/image-product-1-thumbnail.jpg" alt="" id="1" class="gallery__thumbnails">
+          <img src="/images/image-product-2-thumbnail.jpg" alt="" id="2" class="gallery__thumbnails">
+          <img src="/images/image-product-3-thumbnail.jpg" alt="" id="3" class="gallery__thumbnails">
+          <img src="/images/image-product-4-thumbnail.jpg" alt="" id="4" class="gallery__thumbnails">
+        </div>
+      </article>
+      <article class="details">
+        <h2 class="details__company">Sneaker Company</h2>
+        <h2 class="details__title">Fall Limited Edition Sneakers</h2>
+        <p> These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        <div class="details__prices"> 
+          <p class="prices__now">$125.00 <span class="discount">50%</span> </p>
+          <p class="prices__before">$250.00</p>
+        </div>
+        <div class="details__product-quantity">
+          <div class="input">
+            <img src="images/icon-minus.svg" alt="" class="input__minus">
+            <input class="input__number" type="number" value="0">
+            <img src="images/icon-plus.svg" alt="" class="input__plus">
+          </div>
+          <button class="details__button"><img src="/images/icon-cart.svg" alt="" srcset="">Add to cart</button>
+        </div>
+      </article>
     </section>
+    <div class="cart-modal">
+      <p class="cart-modal__title">Cart</p>
+      <div class="checkout-container">
+        <div class="details-container">
+          <img src="/images/image-product-1-thumbnail.jpg" alt="" srcset="">
+          <div>
+            <p class="product">Autumn Limited Edition..</p>
+            <p class="price"></p>
+          </div>
+          <img class="product__delete" src="/images/icon-delete.svg">
+        </div>
+        <button class="modal__delete">Checkout</button>
+      </div>
+    </div>
 
-    </main>
-  
+    <!-- inicio modal gallery -->
+    <div class="modal-gallery__background">
+      <article class="modal-gallery">
+        <img src="/images/icon-close.svg" alt="" class="modal-gallery__icon-close:s">
+        <div class="modal-gallery__image-container">
+          <img src="/images/icon-previous.svg" class="modal-gallery-previus">
+          <img class="modal-gallery-next" src="/images/icon-next.svg" >
+        </div>
+        <div class="modal-gallery__thumbnails">
+          <img src="/images/image-product-1-thumbnail.jpg" alt="" id="01" class="modal-gallery__thumbnails">
+          <img src="/images/image-product-2-thumbnail.jpg" alt="" id="02" class="modal-gallery__thumbnails">
+          <img src="/images/image-product-3-thumbnail.jpg" alt="" id="03" class="modal-gallery__thumbnails">
+          <img src="/images/image-product-4-thumbnail.jpg" alt="" id="04" class="modal-gallery__thumbnails">
+        </div>
+      </article>
+    </div>
 
-  </div>
-
+  </main>
   <script src="index.js"></script>
 </body>
 </html>

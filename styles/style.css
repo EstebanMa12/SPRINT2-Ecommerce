@@ -1,329 +1,111 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
-
-
-/*
-- Mobile: 375px
-- Desktop: 1440px
-*/
-
-:root{
-
-
-/* ### Primary */
-
---Orange: hsl(26, 100%, 55%);
---Pale-orange: hsl(25, 100%, 94%);
-
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 /* ### Neutral */
-
---Very-dark-blue: hsl(220, 13%, 13%);
---Dark-grayish-blue: hsl(219, 9%, 45%);
---Grayish-blue: hsl(220, 14%, 75%);
---Light-grayish-blue: hsl(223, 64%, 98%);
---White: hsl(0, 0%, 100%);
---Black-with-75opacityforlightboxbackground: hsl(0, 0%, 0%);
-
-/* font */
---Fontparagraph: 16px;
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-margin: 0;
-padding: 0;
-font-family: 'Kumbh Sans', sans-serif;
+body {
+  font-family: "Kumbh Sans", sans-serif;
 }
 
-h1, h2, h3, h4, h5{
-padding: 0;
-margin: 0;
+.header {
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+  padding: 0 24px;
 }
-
-ul{
-list-style: none;
+@media (min-width: 1115px) {
+  .header {
+    height: 112px;
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+  }
 }
-
-*, *::after, *::before{
-box-sizing: border-box;
+.header__navigation {
+  width: 175px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
-/* utilities */
-.grid{
-display: grid;
-gap: 10px;
-grid-template-columns: max-content;
+@media (min-width: 1115px) {
+  .header__navigation {
+    width: 590px;
+  }
 }
-.flex{
-display: flex;
-align-items: center;
+.header .icon-menu:hover {
+  cursor: pointer;
 }
-
-
-.container{
-width: 80%;
-margin: auto;
-}
-
-section{
-padding: 100px 15px;
-}
-
-
-/* navbar */
-nav> .avatar{
-width: 50px;
-margin-left:40px;
-}
-nav .avatar{
-	opacity: 1;
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-nav .avatar:hover{
-	opacity: .5;
-}
-nav .icon-cart:hover{
-    width: 25px;
-}
-
-nav{
-
-padding:  0px 0;
-margin: 0;
-border-bottom: 1px solid rgba(31, 22, 22, 0.25);
-/* background-color: brown; */
-}
-
-nav> img{
-cursor: pointer;
-}
-
-nav li{
-padding: 40px 10px;
-color: var(--Dark-grayish-blue);
-font-size: var(--Fontparagraph);
-cursor: pointer;
-
-border: 2px solid transparent;
-}
-
-nav li:hover{
-border-bottom: 2px solid var(--Orange);
-color: black;
-}
-
-ul{
-
-margin-top: 0;
-margin-bottom: 0;
-margin-right: auto;
-margin-left: 20px;
-}
-
-
-
-
-/* main */
-
-.image-container{
-width: 40%;
-}
-
-.image-product-1{
-max-width: 100%;
-}
-
-.smallImages{
-width: 90px;
-margin-right: auto;
-margin-top: 20px;
-}
-
-.smallImages:nth-child(4){
-margin-right: 0;
-}
-
-.box{
-display: flex;
-justify-content: space-between;
-}
-
-.text-box{
-width: 50%;
-
-
-}
-
-.text-box2{
-width: 90%;
-}
-.orange{
-color: var(--Orange);
-}
-.faint-orange{
-color: var(--Pale-orange);
-}
-
-button{
-    background-color: var(--Orange);
-    padding:  20px 100px ;
-    margin: 5px;
-    border-radius: 15px;
-    cursor: pointer;
-    color: var(--White);
-    font-size: 15px;
-    border: 1px solid var(--Orange);
-    font-weight: 700;
-    box-shadow:var(--Orange) 0px 25px 50px -12px;
-    display: flex;
-    align-items: center;
-
-}
-button>span{
-    margin: 0 5px 0 10px
-}
-
-main img{
-    border-radius: 15px;
-}
-main h3{
-text-transform: uppercase;
-font-size: 12px;
-letter-spacing: 2px;
-margin: 45px 0  15px 0;
-font-weight: 700;
-}
-
-main h1{
-font-size: 2.8rem;
-margin: 15px 0;
-}
-
-main p{
-color: var(--Dark-grayish-blue);
-word-spacing: 2px;
-margin: 25px 0;
-line-height: 1.5;
-}
-
-main h2{
-font-size: 1.8rem;
-margin-right: 20px;
-
-}
-.discount{
-padding: 5px 10px;
-font-weight: 700;
-background-color: var(--Pale-orange);
-border-radius: 8px;
-}
-
-.oldP{
-text-decoration: line-through;
-color: var(--Dark-grayish-blue);
-margin:  15px 0;
-font-weight: bold;
-}
-
-.quantityShoes{
-width: 120px;
-padding: 20px 10px;
-background-color: var(--Light-grayish-blue);
-margin-right: auto;
-border-radius: 15px;
-}
-
-/* funtionalities */
-
-#qtyNum{
-margin:0 auto;
-
-}
-
-/* Media queries */
-@media screen and (max-width: 600px) {
-
-nav ul{
-    visibility: hidden;
+@media (min-width: 1115px) {
+  .header .icon-menu {
     display: none;
-    width: 0;
-    
+  }
+}
+.header__cart-avatar {
+  border: 2px solid blue;
+  display: flex;
+  align-items: center;
+  width: 70px;
+  justify-content: space-between;
+}
+@media (min-width: 1115px) {
+  .header__cart-avatar {
+    width: 125px;
+  }
+}
+.header__cart {
+  position: relative;
+}
+.header__cart--notification {
+  display: none;
+  background-color: hsl(26, 100%, 55%);
+  width: 15px;
+  height: 12px;
+  border-radius: 16px;
+  position: absolute;
+  top: -2px;
+  right: -5px;
+  font-size: 0.6em;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+.header__cart:hover {
+  cursor: pointer;
+}
+.header__avatar {
+  width: 24px;
+}
+@media (min-width: 1115px) {
+  .header__avatar {
+    width: 48px;
+  }
+}
+.header__avatar:hover {
+  cursor: pointer;
+  border: 2px solid hsl(26, 100%, 55%);
+  border-radius: 50%;
 }
 
-.box{
-    display: block;
-    width:auto;
-    padding: 0;
+.navbar {
+  display: none;
 }
 
-.container{
-    /* max-width: 350px; */
-    width: 100%;
+.modal-navbar__background {
+  display: none;
 }
 
-.smallImages{
-    
-    display: none;
+.main-container {
+  border: 1px solid black;
+  width: 375px;
+  margin: auto;
+}
+@media (min-width: 1115px) {
+  .main-container {
+    width: 1115px;
+  }
 }
 
-.text-box2{
-    width:100%;
-}
-
-.text-box{
-    width: 80%;
-    margin: auto;
-    display: block;
-}
-
-
-.image-container{
-    width: 100%;
-}
-
-
-nav li{
-    padding: 0;
-}
-
-nav img{
-    display: none;
-    position: absolute;
-    margin: 0;
-}
-
-nav img:nth-child(1){
-    display: block;
-}
-
-.flex{
-    width: 100%;
-}
-
-button{
-    width: 100%;
-    margin: 0;
-}
-
-nav{
-    width: 100%;
-    
-    padding: 20px 0;
-}
-    
-.cart{
-    display: block;
-    width: 100%;
-    padding: 0;
-}
-
-main h1 {
-    font-size: 2rem;
-    margin: 10px 0;
-}
-
-section{
-padding: 30px 0;
-}
-
-}
+/*# sourceMappingURL=style.css.map */
