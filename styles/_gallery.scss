@@ -11,10 +11,10 @@
         
     }
     &__previus{
-        @include mixings.image-btn(170px,15px)
+        @include mixings.image-btn(170px,15px,false)
     }
     &__next{
-        @include mixings.image-btn(170px,320px)
+        @include mixings.image-btn(170px,320px,false)
     }
     &__thumbnails{
         display: none;
