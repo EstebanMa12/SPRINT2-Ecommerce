@@ -250,6 +250,10 @@ body {
   justify-content: center;
   gap: 16px;
 }
+.details__button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
 
 .input {
   height: 57px;
